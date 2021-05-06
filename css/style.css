@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+
+  --color-orange: hsl(31, 77%, 52%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-verydark-cyan: hsl(179, 100%, 13%);
+
+  --color-white: hsla(0, 0%, 100%, 0.75);
+  --color-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  font-size: 15px;
+  color: var(--color-white);
+  background-color: var(--color-light-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+}
+button {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400; 
+}
+
+.app {
+  width: 100vw;
+  padding: 64px 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  
+}
+.cards-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card {
+  padding: 48px;
+  text-align: left;
+}
+
+.card > * {
+  margin-bottom: 36px;
+  display: block;
+}
+.card > *:first-child {
+  margin-top: 0;
+}
+.card > *:last-child {
+  margin-bottom: 0;
+}
+
+.card-orange {
+  background-color: var(--color-orange);
+}
+.card-dark-cyan {
+  background-color: var(--color-dark-cyan);
+}
+.card-verydark-cyan {
+  background-color: var(--color-verydark-cyan);
+}
+
+@media screen and (min-width: 376px) {
+  .cards-wrapper {
+    width: 375px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .cards-wrapper {
+    flex-direction: row;
+    width: auto;
+  }
+  .card{
+    max-width: 310px;
+  }
+  .btn-more {
+    margin-top: 48px;
+  }
+}
+
+.card h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: var(--color-light-gray);
+}
+
+.card p {
+  line-height: 1.6em;
+}
+.card .btn-more {
+  border: 0;
+  background-color: var(--color-light-gray);
+  padding: 0.8em 2em;
+  border-radius: 2em;
+  font-weight: bold;
+  border: solid 3px transparent;
+  text-decoration: none;
+  display: inline-block;
+}
+.card .btn-more:hover {
+  background-color: transparent;
+  color: var(--color-white);
+  border: solid 3px var(--color-white);
+  text-decoration: none;
+}
+.card-orange .btn-more {
+  color: var(--color-orange);
+}
+.card-dark-cyan .btn-more {
+  color: var(--color-dark-cyan);
+}
+.card-verydark-cyan .btn-more {
+  color: var(--color-verydark-cyan);
+}
+
+.attribution {
+  font-size: 11px; 
+  text-align: center;
+  width: 100%;
+  color: var(--color-verydark-cyan);
+  margin: 1em 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}
